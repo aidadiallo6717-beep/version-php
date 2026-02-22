@@ -626,4 +626,51 @@ body {
 }
 
 @keyframes gradient {
-    0
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 80px;
+    }
+    
+    .sidebar .logo-text,
+    .sidebar .nav-item span:last-child,
+    .sidebar .user-details {
+        display: none;
+    }
+    
+    .main {
+        margin-left: 80px;
+    }
+    
+    .nav-item {
+        justify-content: center;
+    }
+    
+    .nav-item span:first-child {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .table-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .table-filters {
+        width: 100%;
+    }
+    
+    .table-filters input {
+        flex: 1;
+    }
+}
